@@ -39,8 +39,9 @@ namespace SplitFileGivenText
                     int iCounter = 0;
 
                     foreach (string str in splitted)
+                    
                     {
-                        File.WriteAllText(Path.GetDirectoryName(filePath) + Path.PathSeparator + Path.GetFileNameWithoutExtension(filePath) + iCounter.ToString() + ".txt", str, Encoding.UTF8);
+                        File.WriteAllText(Path.GetDirectoryName(filePath) + Path.DirectorySeparatorChar + Path.GetFileNameWithoutExtension(filePath) + iCounter.ToString() + ".txt", str, Encoding.UTF8);
                     }
 
                     Console.Write("completed sucessfully...");
